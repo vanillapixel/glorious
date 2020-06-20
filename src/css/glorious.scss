@@ -1,0 +1,244 @@
+// colors
+$dark: #2b2b2b;
+$yellow: #ffd600;
+
+@font-face {
+  font-family: "Play";
+  font-family: "Exo2-Light";
+  src: url("./assets/css/fonts/Exo2-Light.otf");
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Play", sans-serif;
+  background-color: $dark;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.animation-container {
+  padding: 98px 65px;
+  background: #ffd600;
+}
+.content {
+  height: 800px;
+  background: $dark;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .timer-panel {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    margin: 0 100px;
+    height: 50%;
+    .time-remaining {
+      padding: 20px 50px;
+      background: rgb(73, 73, 73);
+      box-shadow: 0px 0px 10px rgb(82, 82, 82);
+      font-size: 2em;
+      align-self: center;
+      display: none;
+    }
+    .controls {
+      flex-direction: column;
+      height: 100%;
+      padding: 90% 0;
+      justify-content: space-evenly;
+    }
+    #pause-play,
+    #reset {
+      padding: 10px 20px;
+      margin: 10px;
+      background: chocolate;
+      cursor: pointer;
+      min-width: 50px;
+      text-align: center;
+      padding: 10px 20px;
+      margin: 10px;
+      background: #f14b4b;
+      cursor: pointer;
+      min-width: 60px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0px 0px 5px 1px #f14b4b;
+      font-size: 1.2em;
+    }
+  }
+  .section-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: flex;
+    min-width: 1400px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+  }
+  .section-wrapper:last-child {
+    margin-bottom: 100px;
+  }
+  .glor-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: $yellow;
+    width: 600px;
+    padding-right: 100px;
+    .top,
+    .bottom {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+  }
+
+  .glorius {
+    width: 300px;
+    height: 200px;
+    background: url("../../src/img/pito.png");
+    background-size: 300%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .top {
+    .text {
+      color: red;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      font-size: 20px;
+      padding: 7px 2px;
+      overflow: hidden;
+      letter-spacing: -11px;
+      width: auto;
+      span {
+        display: block;
+        opacity: 0;
+      }
+    }
+    .one {
+      width: 53px;
+      position: relative;
+      background-position: -60px 38px;
+      top: 50px;
+      left: 27px;
+    }
+    .design {
+      color: red;
+      background: #ffd600;
+      z-index: 2;
+      span {
+        animation-delay: 0s;
+      }
+    }
+    .two {
+      background-position: -90px 88px;
+      width: 66px;
+      z-index: 1;
+      position: relative;
+    }
+    .research {
+      color: green;
+      span {
+        animation-delay: 1s;
+      }
+    }
+    .three {
+      width: 96px;
+      background-position: -160px 88px;
+    }
+    .tech {
+      color: blue;
+      span {
+        animation-delay: 2s;
+      }
+    }
+    .four {
+      width: 110px;
+      background-position: -262px 88px;
+    }
+  }
+  .bottom {
+    .left {
+      background-position: -59px -112px;
+      width: 57px;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      display: none;
+    }
+    .right {
+      background-position: -118px -112px;
+      width: 253px;
+    }
+  }
+}
+.one,
+.left {
+  // border-left: 2px solid red;
+}
+// TODO: CREATE CSS ANIMATION
+
+.text span {
+  // -webkit-animation: rotation 12s infinite;
+  // animation: rotation 12s infinite ease-in-out;
+}
+@keyframes rotation {
+  0% {
+    letter-spacing: -11px;
+    opacity: 0;
+    filter: blur(1px);
+  }
+  10% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  20% {
+    letter-spacing: 2px;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  40% {
+    letter-spacing: 2px;
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  60% {
+    letter-spacing: 2px;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  80% {
+    opacity: 0;
+    filter: blur(1px);
+    letter-spacing: -11px;
+  }
+  100% {
+    letter-spacing: -11px;
+    opacity: 0;
+    filter: blur(1px);
+  }
+}
