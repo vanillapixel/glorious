@@ -6,7 +6,7 @@ function init() {
     duration: !this.slowmo ? 1 : 4,
     pause: 1, //in seconds
     maxExtension: "1.5px",
-    minExtension: "-11px",
+    minExtension: "-10px",
     fps: 30,
     selectedEase: 1,
     reverseAnim: 6,
